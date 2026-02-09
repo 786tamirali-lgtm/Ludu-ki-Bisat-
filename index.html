@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>तामीर अली का सत्य घोषणापत्र - महासंग्रह: अक्ल की जीत</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Nirmala UI', sans-serif;
+        }
+        
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --gold: #e94560;
+            --light: #f1f1f1;
+            --dark: #0d0d1a;
+            --green: #27ae60;
+            --blue: #3498db;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: var(--light);
+            line-height: 1.8;
+            min-height: 100vh;
+            direction: ltr;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* हेडर */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(15, 52, 96, 0.9);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 3px solid var(--gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.1) 0%, transparent 70%);
+            animation: pulse 20s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .main-title {
+            font-size: 3.5rem;
+            color: var(--gold);
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--light);
+            opacity: 0.95;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .author {
+            font-size: 1.4rem;
+            color: #4fc3f7;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* मुख्य सामग्री */
+        .manifesto-section {
+            background: rgba(22, 33, 62, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 8px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+        
+        .manifesto-section:hover {
+            transform: translateY(-10px);
+        }
+        
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 5rem;
+            color: rgba(233, 69, 96, 0.2);
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .section-title {
+            color: var(--gold);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid rgba(233, 69, 96, 0.5);
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            font-size: 2rem;
+        }
+        
+        /* तामीर अली के मूल शब्द */
+        .tamir-quote {
+            background: rgba(15, 52, 96, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #4fc3f7;
+            position: relative;
+            font-size: 1.3rem;
+            line-height: 2;
+            font-style: italic;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tamir-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: rgba(79, 195, 247, 0.2);
+            font-family: serif;
+        }
+        
+        .tamir-quote::after {
+            content: '"';
+            position: absolute;
+            bottom: -60px;
+            right: 20px;
+            font-size: 8rem;
+            color: rgba(79, 195, 247, 0.2);
+            font-family: serif;
+        }
+        
+        /* वैज्ञानिक तर्क */
+        .scientific-argument {
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 5px solid #66bb6a;
+            position: relative;
+        }
+        
+        .scientific-title {
+            color: #66bb6a;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* फिंगरप्रिंट स्कैनर */
+        .fingerprint-scanner {
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid #4fc3f7;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fingerprint {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #1a237e 0%, #0d0d1a 70%);
+            border-radius: 50%;
+            margin: 20px auto;
+            position: relative;
+            border: 5px solid #4fc3f7;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        
+        .fingerprint:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px #4fc3f7;
+        }
+        
+        .fingerprint-pattern {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: repeating-radial-gradient(circle, transparent, transparent 5px, #4fc3f7 5px, #4fc3f7 10px);
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        
+        .scan-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(79, 195, 247, 0.3), transparent);
+            animation: scan 2s infinite linear;
+            border-radius: 50%;
+        }
+        
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        
+        .revelation-text {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(233, 69, 96, 0.1);
+            border-radius: 10px;
+            display: none;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(233, 69, 96, 0.5); }
+            to { box-shadow: 0 0 40px rgba(233, 69, 96, 0.8); }
+        }
+        
+        /* मोबाइल दज्जाल */
+        .dajjal-container {
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid #f44336;
+            position: relative;
+        }
+        
+        .mobile-phone {
+            width: 200px;
+            height: 350px;
+            background: #000;
+            border-radius: 30px;
+            margin: 20px auto;
+            position: relative;
+            border: 5px solid #666;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+        
+        .mobile-screen {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            right: 10px;
+            bottom: 60px;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .eye-animation {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #f44336 0%, #b71c1c 70%);
+            border-radius: 50%;
+            animation: blink 3s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 90%, 100% { transform: translate(-50%, -50%) scale(1); }
+            95% { transform: translate(-50%, -50%) scale(0.8); }
+        }
+        
+        /* रूहानी बिसात गेम */
+        .ruhani-game {
+            background: rgba(26, 26, 46, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid var(--blue);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-header h2 {
+            color: var(--blue);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .game-header p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        /* बिसात बोर्ड */
+        .board {
+            width: 100%;
+            max-width: 350px;
+            aspect-ratio: 1/1;
+            background: #fff;
+            margin: 0 auto;
+            border: 5px solid #FFD700;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            position: relative;
+            border-radius: 12px;
+        }
+        
+        .cell {
+            border: 0.1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: #333;
+        }
+        
+        .shaitan {
+            background: #ffcccc !important;
+            border: 2px solid #e74c3c !important;
+        }
+        
+        .siri {
+            background: #d4edda !important;
+            border: 2px solid #27ae60 !important;
+        }
+        
+        /* रूहानी गोटी */
+        .token {
+            width: 34px;
+            height: 34px;
+            background: radial-gradient(circle, var(--blue), #2980b9);
+            border: 3px solid white;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 100;
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        /* मैसेज डिस्प्ले */
+        .game-controls {
+            max-width: 350px;
+            margin: 20px auto;
+        }
+        
+        .msg-display {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 12px;
+            min-height: 120px;
+            max-height: 150px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            border-left: 6px solid #FFD700;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #FFD700;
+            line-height: 1.4;
+        }
+        
+        .msg-line {
+            border-bottom: 1px solid rgba(255,215,0,0.1);
+            padding: 5px 0;
+        }
+        
+        .dice-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0f3460;
+            padding: 15px;
+            border-radius: 20px;
+            gap: 10px;
+        }
+        
+        .game-dice {
+            width: 65px;
+            height: 65px;
+            background: white;
+            color: #000;
+            border-radius: 12px;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .roll-btn {
+            background: #FFD700;
+            color: #000;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 0 #b8860b;
+            flex-grow: 1;
+        }
+        
+        .roll-btn:disabled {
+            opacity: 0.5;
+            box-shadow: none;
+        }
+        
+        .restart-btn {
+            display: none;
+            background: #27ae60;
+            color: white;
+            box-shadow: 0 5px 0 #1e8449;
+            margin-top: 10px;
+            width: 100%;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        /* निष्कर्ष */
+        .conclusion {
+            background: rgba(233, 69, 96, 0.9);
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 50px;
+            text-align: center;
+            border: 3px solid var(--gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .conclusion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .conclusion-title {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .conclusion-text {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* फुटर */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            background: rgba(15, 52, 96, 0.8);
+            border-radius: 15px;
+            border-top: 5px solid var(--gold);
+        }
+        
+        .seal {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--dark);
+            animation: rotate 20s infinite linear;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* रिस्पॉन्सिव डिजाइन */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .subtitle { font-size: 1.4rem; }
+            .section-title { font-size: 1.8rem; }
+            .container { padding: 10px; }
+            .manifesto-section { padding: 25px; }
+            .tamir-quote { font-size: 1.1rem; padding: 20px; }
+            .board { max-width: 300px; }
+        }
+        
+        /* प्रभाव और एनिमेशन */
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- हेडर -->
+        <div class="header">
+            <h1 class="main-title">तामीर अली का सत्य घोषणापत्र</h1>
+            <h2 class="subtitle">महासंग्रह: अक्ल की जीत</h2>
+            <p class="author">- तामीर अली का पूर्ण दर्शन, एक शब्द भी नहीं बदला -</p>
+        </div>
+
+        <!-- खंड 1: फिंगरप्रिंट और दोबारा जन्म -->
+        <div class="manifesto-section floating">
+            <div class="section-number">1</div>
+            <h2 class="section-title"><i class="fas fa-fingerprint"></i> फिंगरप्रिंट और दोबारा जन्म का अटल सत्य</h2>
+            
+            <div class="tamir-quote" id="original-text-1">
+                "तुम यह सोचते हो कि मरने के बाद फिर से तुम्हें नहीं उठाया जाएगा, तो तुम भ्रम में पड़े हुए हो। क्या तुम देखते नहीं कि वह खुदा एक ही मिट्टी से तीखा, मीठा, खट्टा सभी तरह के फल निकाल देता है? तुम एक नकली जादूगर की एक जादूगरी देखकर दंग रह जाते हो और उसकी तारीफ करते नहीं थकते। वैसे ही खुदा ने तुम्हें अपनी तारीफ के लिए बनाया है ताकि तुम यह दुनिया को देखो और उसकी तारीफ करो। अगर ऐसा नहीं है तो यह तुम बता दो कि खुदा को तुमसे फायदा क्या है? अगर तुम सोचते हो कि प्रकृति ने तुम्हें बनाया है, तो यह बताओ कि प्रकृति को यह कैसे पता कि तुम्हें जीने के लिए भी कुछ चाहिए जैसे सांस, पानी, धूप, हवा, खाने-पीने का सामान? वैसे ही खुदा तुम्हें फिर से उगाने में समर्थ है जैसे मिट्टी में तुम्हें एक बीज डालते हो और उसके बाद तुम्हें कुछ पता नहीं रहता, बीज को वही पेड़ बनाता है। खुदा अपनी किताब में फिंगरप्रिंट (Fingerprint) के हवाला देकर कहता है कि 'मैं तुम्हारे पोर-पोर को जोड़ सकता हूँ'। इससे साबित होता है कि खुदा ने हमारी खेती कर रखी है और हमें एक दिन फिर से खड़ा कर देगा जिसकी गवाही फिंगरप्रिंट देती है।"
+            </div>
+            
+            <div class="scientific-argument">
+                <h3 class="scientific-title"><i class="fas fa-dna"></i> अतिरिक्त वैज्ञानिक तर्क</h3>
+                <p>इंसान के मरने और गलने के बाद भी उसका DNA और Unique Fingerprint Code उस मालिक के डेटाबेस में सुरक्षित रहता है। जैसे कंप्यूटर का 'रीसायकल बिन' डेटा वापस ला सकता है, वैसे ही वह खालिक हमें हमारे फिंगरप्रिंट के आधार पर दोबारा खड़ा करेगा।</p>
+            </div>
+            
+            <div class="fingerprint-scanner">
+                <h3><i class="fas fa-hand-pointer"></i> फिंगरप्रिंट सत्य का प्रत्यक्ष प्रमाण</h3>
+                <p>अपना अंगूठा स्कैन करने के लिए नीचे दिए गए फिंगरप्रिंट पर क्लिक करें:</p>
+                
+                <div class="fingerprint" id="fingerprint-scanner">
+                    <div class="fingerprint-pattern"></div>
+                    <div class="scan-animation"></div>
+                </div>
+                
+                <div class="revelation-text" id="revelation">
+                    "खुदा ने हमारी खेती कर रखी है और हमें फिंगरप्रिंट के आधार पर दोबारा खड़ा करेगा!"
+                </div>
+            </div>
+        </div>
+
+        <!-- खंड 2: बिग बैंग और पानी के बुलबुले -->
+        <div class="manifesto-section floating" style="animation-delay: 0.5s;">
+            <div class="section-number">2</div>
+            <h2 class="section-title"><i class="fas fa-atom"></i> बिग बैंग और पानी के बुलबुले का तर्क</h2>
+            
+            <div class="tamir-quote" id="original-text-2">
+                "जैसे पानी में बिना हरकत के बुलबुला नहीं बनता, ठीक वैसे ही बिना हरकत के धमाका नहीं हो सकता और धमाका से व्यवस्था नहीं बनती, बर्बादी ही बर्बादी होती है, कोहराम होता है।"
+            </div>
+            
+            <div class="scientific-argument">
+                <h3 class="scientific-title"><i class="fas fa-brain"></i> अतिरिक्त तार्किक विस्तार</h3>
+                <p>विज्ञान जिसे 'बिग बैंग' कहता है, वह असल में खुदा के पासे की 'पहली हलचल' थी। धमाका लोहे के कारखाने में हो तो कचरा बनता है, 'हवाई जहाज' नहीं। अगर यह ब्रह्मांड एक व्यवस्थित मशीन की तरह चल रहा है, तो इसके पीछे 'सोच' और 'हिलाने वाले' का हाथ 100% अनिवार्य है।</p>
+            </div>
+        </div>
+
+        <!-- खंड 3: लूडो की बिसात - अब रूहानी बिसात गेम के साथ -->
+        <div class="manifesto-section floating" style="animation-delay: 1s;">
+            <div class="section-number">3</div>
+            <h2 class="section-title"><i class="fas fa-dice"></i> लूडो की बिसात: जीवन का रूहानी दर्शन</h2>
+            
+            <div class="tamir-quote" id="original-text-3">
+                "यह वह खेल है जिसे लगता है कि खुदा ने किसी को इशारा किया है और यह खेल बना दिया गया हो। यह खेल हमें समझाती है कि हमें दुनिया में कैसे रहना चाहिए, कैसे चलना चाहिए। लूडो पर उतरने से पहले यानी दुनिया में आने से पहले एक रूह का पासा फेंकता है और एक इंसान दुनिया में खड़ा होता है। लूडो के विसात पर जैसे लूडो खेल पर उतरने के लिए पहले पासा फेंका जाता है और जब 'छह' (6) आता है जब भी हम लूडो पर खेल सकते हैं, यही है खुदा का हुक्म। उसके बाद यह खेल स्टार्ट हो जाती है। एक इंसान के लिए लूडो पर जब तुम्हारा करम अच्छा रहता है तो सीढ़ी प्राप्त होती है जैसे ब्लैक होल रूह के लिए, और जब तुम्हारा करम खराब रहता है तो सांप तुम्हें काट लेता है और तुम्हें फिर से मेहनत करनी पड़ती है। कभी-कभी खुदा आजमाइश के लिए भी इंसान को सांप से कटवा देता है कि देखूँ यह इंसान मेरे प्रति क्या बोल रहा है, इसलिए इंसान को धीरज रखना चाहिए, शुक्र अदा करते रहना चाहिए। अब तुम देखो लूडो की विसात पर पासा तुम फेंकते हो लेकिन तुम्हें यह पता नहीं होता कि उस पर नंबर कितना आएगा, यह आज भी खुदा के हाथों में ही होता है। यह एक नेचुरल गेम है कोई टाइम पास नहीं लगता, आप इसे टाइम पास समझ कर ना खेलें, यह गेम दुनिया के खेल को समझाता है।"
+            </div>
+            
+            <!-- रूहानी बिसात गेम -->
+            <div class="ruhani-game">
+                <div class="game-header">
+                    <h2>रूहानी बिसात - लूडो का रूहानी दर्शन</h2>
+                    <p>तामीर अली: सत्य का घोषणापत्र (786)</p>
+                </div>
+                
+                <div class="board" id="board"></div>
+                
+                <div class="game-controls">
+                    <div class="msg-display" id="msg-container">
+                        <div class="msg-line">पासा खुदा की मर्जी है। सफर शुरू करें...</div>
+                    </div>
+                    
+                    <div class="dice-area">
+                        <div class="game-dice" id="dice-val">?</div>
+                        <button class="roll-btn" id="rollBtn">खुदा का पासा फेंकें</button>
+                    </div>
+
+                    <button class="restart-btn" id="restartBtn">सफर दोबारा शुरू करें</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- खंड 4: सच्चे खुदा की पहचान -->
+        <div class="manifesto-section floating" style="animation-delay: 1.5s;">
+            <div class="section-number">4</div>
+            <h2 class="section-title"><i class="fas fa-user-shield"></i> सच्चे खुदा और मार्गदर्शक की पहचान</h2>
+            
+            <div class="tamir-quote" id="original-text-4">
+                "अक्ल का इस्तेमाल करो। बनाने वाला (Creator) अपनी बनाई चीज़ (Creation) जैसा नहीं होता। श्री राम का जीवन एक महान आदर्श है, वे 'मर्यादा पुरुषोत्तम' थे, लेकिन उनकी मानवीय सीमाएं—जैसे सीता जी के वियोग में विलाप करना, लक्ष्मण जी के मूर्छित होने पर दुखी होना, बाली को छिपकर मारना—यह प्रमाण हैं कि वे उस असीम 'गैब के मालिक' के भेजे हुए मार्गदर्शक थे। वह 'असीम खुदा' न रोता है, न उसे छिपने की जरूरत है, न वह जन्म लेता है। वह निराकार है और पूरी कायनात को बिना किसी माध्यम के चलाता है।"
+            </div>
+            
+            <div class="scientific-argument">
+                <h3 class="scientific-title"><i class="fas fa-lightbulb"></i> मर्यादा पुरुषोत्तम तर्क</h3>
+                <p>मर्यादा = सीमा। पुरुषोत्तम = श्रेष्ठ मनुष्य। श्री राम 'सीमित श्रेष्ठ मनुष्य' थे, न कि 'असीम खुदा'। यही अंतर हमें समझना चाहिए। रचयिता और रचना के बीच की यह दिव्य दूरी ही 'तौहीद' की आधारशिला है।</p>
+            </div>
+        </div>
+
+        <!-- खंड 5: दज्जाल का जाल -->
+        <div class="manifesto-section floating" style="animation-delay: 2s;">
+            <div class="section-number">5</div>
+            <h2 class="section-title"><i class="fas fa-mobile-alt"></i> दज्जाल का जाल: एक आँख वाला मोबाइल</h2>
+            
+            <div class="tamir-quote" id="original-text-5">
+                "आज का शैतान 'एक आँख वाला मोबाइल' (दज्जाल) है। यह आपकी अक्ल को कुंद कर रहा है, आपके अपनों से आपको दूर कर रहा है। 'दज्जाल डिफीट फॉर्मूला' यही है कि समय को बर्बाद न करें, विवेक का उपयोग करें और डिजिटल दुनिया के धोखे से निकलकर उस एक मालिक की पहचान करें।"
+            </div>
+            
+            <div class="dajjal-container">
+                <h3><i class="fas fa-eye"></i> आधुनिक दज्जाल का चेहरा</h3>
+                
+                <div class="mobile-phone">
+                    <div class="mobile-screen">
+                        <div class="eye-animation"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h4>दज्जाल डिफीट फॉर्मूला:</h4>
+                    <p style="font-size: 1.4rem; color: #4fc3f7; margin: 15px 0;">
+                        समय प्रबंधन + विवेक का उपयोग = दज्जाल की हार
+                    </p>
+                </div>
+                
+                <button id="defeat-dajjal" style="background: #4CAF50; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; cursor: pointer; margin-top: 20px; transition: all 0.3s;">
+                    <i class="fas fa-shield-alt"></i> दज्जाल को हराने का संकल्प लें
+                </button>
+            </div>
+        </div>
+
+        <!-- निष्कर्ष -->
+        <div class="conclusion">
+            <h2 class="conclusion-title">महासंग्रह: अक्ल की जीत</h2>
+            <p class="conclusion-text">
+                "अक्ल की जीत" का मार्ग 'तौहीद' (एक ईश्वरवाद) है। इस्लाम का मूल संदेश इसी तर्क पर खरा उतरता है। अंधविश्वास को छोड़कर अक्ल का इस्तेमाल करना ही इंसान की असली कामयाबी है।
+                <br><br>
+                तामीर अली जी के ये शब्द पत्थर की लकीर हैं - इनमें एक भी शब्द न हटाया जा सकता है, न बदला जा सकता है।
+            </p>
+        </div>
+
+        <!-- फुटर -->
+        <div class="footer">
+            <div class="seal">
+                <i class="fas fa-star"></i>
+            </div>
+            <h3>तामीर अली का सत्य घोषणापत्र</h3>
+            <p>मूल शब्दों की पवित्रता बनाए रखते हुए प्रस्तुत किया गया</p>
+            <p style="margin-top: 20px; color: rgba(255,255,255,0.7);">© सत्य की विरासत - एक शब्द भी नहीं बदला</p>
+        </div>
+    </div>
+
+    <script>
+        // ============== फिंगरप्रिंट स्कैनर इंटरैक्शन ==============
+        document.getElementById('fingerprint-scanner').addEventListener('click', function() {
+            const revelation = document.getElementById('revelation');
+            this.style.transform = 'scale(1.2)';
+            this.style.boxShadow = '0 0 100px #4fc3f7';
+            
+            // स्कैनिंग एनिमेशन
+            setTimeout(() => {
+                revelation.style.display = 'block';
+                revelation.style.animation = 'glow 2s infinite alternate';
+                
+                // तामीर अली के शब्द हाइलाइट करें
+                document.getElementById('original-text-1').style.background = 'rgba(79, 195, 247, 0.3)';
+                document.getElementById('original-text-1').style.borderColor = '#4fc3f7';
+                document.getElementById('original-text-1').style.transform = 'scale(1.02)';
+                document.getElementById('original-text-1').style.transition = 'all 0.5s ease';
+            }, 1000);
+            
+            // रीसेट करें
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            }, 3000);
+        });
+
+        // ============== दज्जाल को हराने का बटन ==============
+        document.getElementById('defeat-dajjal').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-check-circle"></i> संकल्प पूरा हुआ!';
+            this.style.background = '#2E7D32';
+            this.disabled = true;
+            
+            // मोबाइल स्क्रीन बंद करें
+            document.querySelector('.mobile-screen').style.background = '#000';
+            document.querySelector('.eye-animation').style.display = 'none';
+            
+            // सफलता संदेश
+            setTimeout(() => {
+                alert('बधाई! आपने दज्जाल के जाल से मुक्ति का संकल्प ले लिया है।\n\nयाद रखें: समय प्रबंधन + विवेक = दज्जाल की हार');
+            }, 500);
+        });
+
+        // ============== रूहानी बिसात गेम ==============
+        const cellsCount = 49;
+        let currentPos = 0;
+        let isMoving = false;
+
+        const shaitan = { 
+            46: 15,  // बड़ा सांप
+            38: 10,  // मध्यम सांप
+            26: 5    // छोटा सांप
+        }; 
+        
+        const siri = { 
+            3: 18,   // छोटी सीढ़ी
+            14: 35,  // मध्यम सीढ़ी
+            29: 45   // बड़ी सीढ़ी
+        };   
+
+        function initGame() {
+            const board = document.getElementById('board');
+            board.innerHTML = ""; 
+            
+            // 7x7 बोर्ड बनाएं
+            for (let i = 1; i <= cellsCount; i++) {
+                let cell = document.createElement('div');
+                cell.className = 'cell';
+                cell.id = 'c' + i;
+                
+                // सेल में नंबर और आइकन
+                let icon = "";
+                if (shaitan[i]) { 
+                    cell.className += ' shaitan'; 
+                    icon = "🐍"; 
+                }
+                if (siri[i]) { 
+                    cell.className += ' siri'; 
+                    icon = "🪜"; 
+                }
+                
+                cell.innerHTML = `<span>${i}</span><span style="font-size:12px">${icon}</span>`;
+                board.appendChild(cell);
+            }
+            updateToken(0);
+        }
+
+        function addMsg(text) {
+            const container = document.getElementById('msg-container');
+            const newLine = document.createElement('div');
+            newLine.className = 'msg-line';
+            newLine.innerHTML = "• " + text;
+            container.prepend(newLine);
+            
+            // स्क्रॉल नीचे करें
+            container.scrollTop = 0;
+        }
+
+        async function rollDiceGame() {
+            if (isMoving) return;
+            const btn = document.getElementById('rollBtn');
+            btn.disabled = true;
+
+            // पासा एनिमेशन
+            const dice = document.getElementById('dice-val');
+            dice.innerHTML = '...';
+            dice.style.animation = 'floating 0.5s ease';
+            
+            // रैंडम नंबर (1-6)
+            const roll = Math.floor(Math.random() * 6) + 1;
+            
+            // छोटी देरी
+            await new Promise(r => setTimeout(r, 600));
+            
+            dice.innerHTML = roll;
+            addMsg(`पासा खुदा की मर्जी है: <b>${roll}</b> आया।`);
+
+            // आगे की प्रक्रिया
+            await new Promise(r => setTimeout(r, 600));
+
+            if (currentPos === 0 && roll !== 6) {
+                addMsg("निराश न हों, मुश्किल वक्त में थक के न बैठें। फिर कोशिश करें।");
+                btn.disabled = false;
+            } else {
+                await moveToken(roll);
+            }
+        }
+
+        async function moveToken(steps) {
+            isMoving = true;
+            
+            // पहली बार छक्का आने पर
+            if (currentPos === 0 && steps === 6) {
+                currentPos = 1; 
+                steps = 0;
+                addMsg("<b>मर्जी-ए-इलाही!</b> रूहानी सफर शुरू हुआ।");
+                updateToken(currentPos);
+                await new Promise(r => setTimeout(r, 500));
+            }
+
+            // स्टेप्स के अनुसार चलें
+            for (let i = 0; i < steps; i++) {
+                if (currentPos < cellsCount) {
+                    currentPos++;
+                    updateToken(currentPos);
+                    await new Promise(r => setTimeout(r, 300));
+                }
+            }
+
+            // सांप पर पहुंचे तो
+            if (shaitan[currentPos]) {
+                addMsg(`🐍 <b>शैतान का फंदा:</b> सांप ने काटा! यह दुनिया का नियम है, शैतान हर मोड़ पर मिलेगा। <b>हिम्मत न हारें!</b>`);
+                await new Promise(r => setTimeout(r, 1000));
+                
+                const oldPos = currentPos;
+                currentPos = shaitan[currentPos];
+                updateToken(currentPos);
+                addMsg(`${oldPos} से ${currentPos} पर वापस आ गए।`);
+            } 
+            // सीढ़ी पर पहुंचे तो
+            else if (siri[currentPos]) {
+                addMsg(`🪜 <b>सीढ़ी:</b> ऊपर चढ़ गए! यह दुनिया का नियम है, अच्छे कर्म का फल मिलता है।`);
+                await new Promise(r => setTimeout(r, 1000));
+                
+                const oldPos = currentPos;
+                currentPos = siri[currentPos];
+                updateToken(currentPos);
+                addMsg(`${oldPos} से ${currentPos} पर पहुंच गए।`);
+            }
+
+            // जीत गए तो
+            if (currentPos === cellsCount) {
+                addMsg("🏆 <b>पूर्ण विजय!</b> तामीर अली, आपने सत्य को प्राप्त कर लिया। अक्ल की जीत हुई! यही दुनिया का नियम है।");
+                document.getElementById('rollBtn').style.display = 'none';
+                document.getElementById('restartBtn').style.display = 'block';
+                
+                // तामीर अली के शब्द हाइलाइट करें
+                document.getElementById('original-text-3').style.background = 'rgba(233, 69, 96, 0.3)';
+                document.getElementById('original-text-3').style.borderColor = 'var(--gold)';
+                document.getElementById('original-text-3').style.transform = 'scale(1.02)';
+                document.getElementById('original-text-3').style.transition = 'all 0.5s ease';
+            } else {
+                document.getElementById('rollBtn').disabled = false;
+            }
+            isMoving = false;
+        }
+
+        function updateToken(pos) {
+            let token = document.getElementById('user-token');
+            if (!token) {
+                token = document.createElement('div');
+                token.id = 'user-token';
+                token.className = 'token';
+                token.innerHTML = "🌙";
+                document.getElementById('board').appendChild(token);
+            }
+            
+            if (pos === 0) { 
+                token.style.display = 'none'; 
+                return; 
+            }
+            
+            token.style.display = 'flex';
+            const cell = document.getElementById('c' + pos);
+            if (cell) {
+                token.style.left = cell.offsetLeft + (cell.offsetWidth/2 - 17) + "px";
+                token.style.top = cell.offsetTop + (cell.offsetHeight/2 - 17) + "px";
+            }
+        }
+
+        function resetGame() {
+            currentPos = 0;
+            document.getElementById('dice-val').innerHTML = "?";
+            document.getElementById('msg-container').innerHTML = '<div class="msg-line">पासा खुदा की मर्जी है। सफर दोबारा शुरू करें... यह दुनिया का नियम है।</div>';
+            document.getElementById('rollBtn').style.display = 'block';
+            document.getElementById('rollBtn').disabled = false;
+            document.getElementById('restartBtn').style.display = 'none';
+            updateToken(0);
+        }
+
+        // ============== पेज लोड इनिशियलाइजेशन ==============
+        window.addEventListener('load', function() {
+            initGame();
+            
+            // इवेंट लिसनर्स सेट करें
+            document.getElementById('rollBtn').addEventListener('click', rollDiceGame);
+            document.getElementById('restartBtn').addEventListener('click', resetGame);
+            
+            // स्वागत संदेश
+            console.log("तामीर अली का सत्य घोषणापत्र लोड हो गया");
+            console.log("महासंग्रह: अक्ल की जीत - एक शब्द भी नहीं बदला");
+            
+            // सभी मूल पाठ हाइलाइट करें
+            const originalTexts = document.querySelectorAll('.tamir-quote');
+            originalTexts.forEach(text => {
+                text.innerHTML = `<div style="position: relative; z-index: 2;">${text.innerHTML}</div>`;
+            });
+        });
+
+        // ============== स्क्रॉल एनिमेशन ==============
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.manifesto-section, .ruhani-game');
+            sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                if(rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
